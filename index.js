@@ -1,34 +1,20 @@
 import { Cliente } from './Cliente.js';
 import { cuentaCorriente } from './CuentaCorriente.js';
 
-const cliente = new Cliente();
-cliente.nombreCliente = "Andres";
-cliente.IdCliente = "1234567890";
-cliente.rutCliente = "2039-98";
+const cliente = new Cliente("Andres", "1234567890", "2039-98" );
+const cliente2 = new Cliente("Maria", "0987654321", "2030-09");
 
 
-const cuentaDeAndres = new cuentaCorriente ();
+const cuentaDeAndres = new cuentaCorriente ("001","1",cliente, );
 
-cuentaDeAndres.numeroCuenta = "1";
-cuentaDeAndres.Agencia ="001";
-cuentaDeAndres.cliente = cliente;
+const cuentaDeMaria = new cuentaCorriente ("002","2", cliente2);
 
-
-
-const cliente2 = new Cliente();
-cliente2.nombreCliente = "Maria";
-cliente2.IdCliente = "0987654321";
-cliente2.rutCliente = "2030-09";
+console.log( cuentaDeMaria.cliente)
+console.log( cuentaDeAndres.cliente)
+console.log(cuentaCorriente.cantidadCuentas)
 
 
-const cuentaDeMaria = new cuentaCorriente ();
-
-cuentaDeMaria.numeroCuenta = "2";
-cuentaDeMaria.Agencia ="002";
-cuentaDeMaria.cliente = cliente;
-
-cuentaDeAndres.Deposito(5000);
-
+/*
 let Saldo = cuentaDeAndres.VerSaldo ();
 
 
@@ -45,7 +31,7 @@ const saldoAndres = cuentaDeAndres.VerSaldo()
 
 console.log ("saldo cuenta es (Andres): "+ saldoAndres)
 
-
+*/
 
 
 
